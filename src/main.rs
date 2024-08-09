@@ -1,5 +1,5 @@
 use rand::Rng;
-use std::io::{self, Write}; // Importa Write para poder usar flush
+use std::io::{self, Write};
 
 fn main() {
     println!(">>>>>>>>> Guess the number <<<<<<<<");
