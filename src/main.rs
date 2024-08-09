@@ -6,7 +6,7 @@ fn main() {
 
     loop {
         play();
-        print!("Do you want to play again? (y/n): ");
+        print!("\nDo you want to play again? (y/n): ");
         std::io::stdout().flush().unwrap();
 
         let mut play_again = String::new();
@@ -18,6 +18,8 @@ fn main() {
         if play_again.trim() != "y" {
             break;
         }
+
+        print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
     }
 
     println!("Goodbye!");
